@@ -1,19 +1,22 @@
 # Laravel Module Installer
 
+All packages that have type `laravel-module` in composer.json will be automatically move to 'Module' or configured folder
+
 The purpose of this package is to allow for easy installation of standalone Modules into the [Laravel Modules](https://github.com/nWidart/laravel-modules) package. This package will ensure that your module is installed into the `Modules/` directory instead of `vendor/`.
 
-You can specify an alternate directory by including a `module-dir` in the extra data in your composer.json file:
+You can specify an alternate directory by including a `module-dir` , `module-name` in the extra data in your composer.json file:
 
     "extra": {
-        "module-dir": "Custom"
+        "module-dir": "Custom",
+        "module-name": "PrettyName" 
     }
 
 
 ## Installation
 
-1. Ensure you have the `type` set to `laravel-module` in your module's `composer.json`
-2. Ensure your package is named in the convention `<namespace>/<name>-module`, for example `joshbrw/user-module` would install into `Modules/User`
-3. Require this package: `composer require joshbrw/laravel-module-installer`
+1. Ensure you have the `type` set to `laravel-module` in your module's `composer.json
+2. ~~Ensure your package is named in the convention `<namespace>/<name>-module`, for example `joshbrw/user-module` would install into `Modules/User`~~
+3. Require this package: `composer require visanduma/laravel-module-installer`
 4. Require your bespoke module using Composer. You may want to set the constraint to `dev-master` to ensure you always get the latest version.
 
 ## Notes
